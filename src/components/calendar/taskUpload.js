@@ -63,8 +63,7 @@ const TaskUpload = () => {
     const [visible, setVisible] = useState(false);
     const buttonStyle = {
         position: "relative",
-        left: "50%",
-        right: "50%",
+        left: "45%",
     };
 
     const onCreate = values => {
