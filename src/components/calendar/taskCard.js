@@ -1,13 +1,15 @@
 import React from "react";
-import { Card } from 'antd';
-import { CheckCircleTwoTone } from '@ant-design/icons';
+import { Card, Divider, Button } from 'antd';
+import { CheckCircleTwoTone, DeleteOutlined } from '@ant-design/icons';
 
 const PomodoroCountMark = (props) => {
     const checkMark = <CheckCircleTwoTone twoToneColor="#56a32f" />;
-
+    const number = props.number;
     return (
         <div>
-            {[...Array(props.number).keys()].map(i => <>{checkMark}{' '}</>)}
+            {(number > 0) ? <>{number}{" "}X{" "}{checkMark}</ > : <></ >}
+            <Divider type="vertical" />
+            <Button type="danger" shape="circle" icon={<DeleteOutlined />} />
         </div>
     );
 }

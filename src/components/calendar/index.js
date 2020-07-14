@@ -19,13 +19,13 @@ const Calendar = () => {
         <div>
             <TaskUpload />
             <Divider />
-            <Row gutter={16} align="middle">
+            <Row gutter={16} align="top">
                 <Col span={1}>
                     <Button type="ghost" shape="circle" icon={<LeftOutlined />} />
                 </Col>
                 {dateList.map(date => (date === today) ?
-                    <Col span={7}><DayCard date={date} border={true} /></Col> :
-                    <Col span={7}><DayCard date={date} border={false} /></Col>)}
+                    <Col span={7}><DayCard date={date} today={true} /></Col> :
+                    <Col span={7}><DayCard date={date} today={false} /></Col>)}
                 <Col span={1}>
                     <Button type="ghost" shape="circle" icon={<RightOutlined />} />
                 </Col>
