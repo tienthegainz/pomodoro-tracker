@@ -5,15 +5,17 @@ import { Col, Row, Divider, Button } from 'antd';
 import { RightOutlined, LeftOutlined } from '@ant-design/icons';
 
 const Calendar = () => {
-    var today = new Date();
-    var dd = String(today.getDate()).padStart(2, '0');
-    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-    var yyyy = today.getFullYear();
+    // var today = new Date();
+    // var dd = String(today.getDate()).padStart(2, '0');
+    // var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    // var yyyy = today.getFullYear();
 
-    today = mm + '/' + dd + '/' + yyyy;
+    // today = mm + '/' + dd + '/' + yyyy;
 
-    let dateList = [mm + '/' + String((+dd) - 1) + '/' + yyyy, today, mm + '/' + String((+dd) + 1) + '/' + yyyy]
+    // let dateList = [mm + '/' + String((+dd) - 1) + '/' + yyyy, today, mm + '/' + String((+dd) + 1) + '/' + yyyy]
 
+    const today = "07/14/2020";
+    let dateList = ["07/13/2020", "07/14/2020", "07/15/2020"]
 
     return (
         <div>
